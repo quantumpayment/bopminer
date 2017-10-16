@@ -47,7 +47,7 @@ deploy:
   release: ethminer $(ethminer_version)
   description: ''
   force_update: true  # Force update in case Travis CI created the release before.
-  prerelease: $(ethminer_version_is_prerelease)
+  prerelease: false
   draft: false
   artifact: ethminer
   auth_token:
