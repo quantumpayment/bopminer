@@ -10,6 +10,9 @@ os: Visual Studio 2015
 configuration:
   - Release
   - RelWithDebInfo
+environment:
+  GITHUB_USER_PASSWORD:
+    secure: L1V5UUMz1qk/JynNH+1JRQ==
 
 install: |
   appveyor DownloadFile https://github.com/ethereum/cpp-dependencies/releases/download/cache/CUDA-v8.0-WindowsServer2012.zip
@@ -30,7 +33,6 @@ after_build:
     if (-not $env:appveyor_pull_request_number) {
       cmake --build build --target hunter_upload_cache
     }
-
 artifacts:
   - path: build/ethminer-*.zip
     name: ethminer
@@ -49,6 +51,6 @@ deploy:
   draft: false
   artifact: ethminer
   auth_token:
-    secure: KWgPBjt0yaRk9BnYI+3u2nyiZVgN2QYgBoRUy2PFaLCGTYZQGlBIrwM44K7c/9UX
+    secure: c/N504CVO8e4x6WRQ4zejeo2KZ52W35d4s8hTvhvHJoeqxzGyXpQ0TNfsjh80xu+
   on:
     appveyor_repo_tag: true
