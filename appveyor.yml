@@ -10,9 +10,6 @@ os: Visual Studio 2015
 configuration:
   - Release
   - RelWithDebInfo
-environment:
-  GITHUB_USER_PASSWORD:
-    secure: rLziGr2LjMNDchFQfSbmuw==
 
 install: |
   appveyor DownloadFile https://github.com/ethereum/cpp-dependencies/releases/download/cache/CUDA-v8.0-WindowsServer2012.zip
