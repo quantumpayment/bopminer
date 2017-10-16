@@ -12,7 +12,7 @@ configuration:
   - RelWithDebInfo
 environment:
   GITHUB_USER_PASSWORD:
-    secure: VnpF1MH5MEFvUI5MiMMMFlmbDdst+bfom5ZFVgalYPp/SYDhbejjXJm9Dla/IgpC
+    secure: rLziGr2LjMNDchFQfSbmuw==
 
 install: |
   appveyor DownloadFile https://github.com/ethereum/cpp-dependencies/releases/download/cache/CUDA-v8.0-WindowsServer2012.zip
@@ -52,6 +52,6 @@ deploy:
   draft: false
   artifact: ethminer
   auth_token:
-    secure: uDRcvbW+9GIyKlZ9guJfWOQ6jg0An6eULg6mEkYgdKn/GVNpYSKvO5oHxP0U8a+e
+    secure: KWgPBjt0yaRk9BnYI+3u2nyiZVgN2QYgBoRUy2PFaLCGTYZQGlBIrwM44K7c/9UX
   on:
     appveyor_repo_tag: true
